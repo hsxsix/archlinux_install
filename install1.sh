@@ -1,5 +1,5 @@
 #/bin/bash
-# 请不要随意更改两个文件名 ins2.sh为第二个文件的名称
+# 请不要随意更改两个文件名 install2.sh为第二个文件的名称
 #分区
     parted /dev/sda mklabel gpt
     parted /dev/sda mkpart primary ext4 0% 3M    #sda1
@@ -20,9 +20,9 @@
     genfstab -U /mnt >> /mnt/etc/fstab
 #    cp -p /etc/resolv.conf /mnt/etc/resolv.conf    #？？
 #初步配置
-    cp -p ins2.sh /mnt/ins2.sh
+    cp -p install2.sh /mnt/install2.sh
     arch-chroot /mnt /ins2.sh
-    rm /mnt/ins2.sh
+    rm /mnt/install2.sh
 #退出重启    
     umount -R /mnt 
     reboot

@@ -5,11 +5,7 @@
     hwclock --systohc --utc
 #语言
     echo en_US .UTF-8 UTF-8 >> /etc/locale.gen
-    echo en_US ISO-8859-1 >> /etc/locale.gen
     echo zh_CN.UTF-8 UTF-8 >> /etc/locale.gen
-    echo zh_CN.GB18030 GB18030   >> /etc/locale.gen
-    echo zh_CN.GBK GBK   >> /etc/locale.gen
-    echo zh_CN GB2312  >> /etc/locale.gen
     locale-gen
     echo LANG=en_US.UTF-8 > /etc/locale.conf
 #引导    
